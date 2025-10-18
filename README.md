@@ -44,6 +44,12 @@ Create `.env` files for each app (backend and frontend if needed). Example backe
 PORT=5000
 MONGO_URI=<your-mongodb-connection-string>
 JWT_SECRET=<your-jwt-secret>
+
+CLOUDINARY_CLOUD_NAME=<cloud-name>
+CLOUDINARY_API_KEY=<secret-key>
+CLOUDINARY_API_SECRET=<secret-value>
+
+NODE_ENV=development
 ```
 
 Frontend uses Vite and may read environment variables via `import.meta.env`. Example (optional):
