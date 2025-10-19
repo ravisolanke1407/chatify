@@ -1,4 +1,3 @@
-// src/store/middleware/socketMiddleware.js
 import createSocket from "../../lib/socketClient";
 import {
   SOCKET_CONNECTED,
@@ -9,7 +8,8 @@ import {
 } from "../socketActions";
 import { checkAuth, logout } from "../action";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5001";
+const SOCKET_URL =
+  import.meta.env.MODE === "development" ? "http://localhost:5001" : "/";
 
 export const createSocketMiddleware = () => {
   let socket = null;
